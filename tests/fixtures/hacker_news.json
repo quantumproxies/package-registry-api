@@ -1,0 +1,52 @@
+{
+ "run_id": "cmvksnsmb0uh541o52mbxl4un",
+ "slug": "hacker_news",
+ "version": "1.1.1",
+ "status": "done",
+ "input": {
+  "query": "web scraping",
+  "max_results": 3
+ },
+ "count": 3,
+ "partial": false,
+ "finished_at": "2026-10-23T09:55:25.875Z",
+ "results": [
+  {
+   "id": "22180559",
+   "url": "https://parsers.me/us-court-fully-legalized-website-scraping-and-technically-prohibited-it/",
+   "rank": 1,
+   "tags": [
+    "story"
+   ],
+   "text": null,
+   "type": "story",
+   "title": "Congrats! Web scraping is legal! (US precedent)",
+   "author": "ehurynovich",
+   "domain": "parsers.me",
+   "hn_url": "https://news.ycombinator.com/item?id=22180559",
+   "points": 1057,
+   "comments": 388,
+   "created_at": "2020-01-29T14:06:37Z",
+   "updated_at": "2025-03-28T05:39:14Z"
+  },
+  {
+   "id": "31075396",
+   "url": "https://techcrunch.com/2022/04/18/web-scraping-legal-court/",
+   "rank": 2,
+   "tags": [
+    "story"
+   ],
+   "text": null,
+   "type": "story",
+   "title": "Web scraping is legal, US appeals court reaffirms",
+   "author": "spenvo",
+   "domain": "techcrunch.com",
+   "hn_url": "https://news.ycombinator.com/item?id=31075396",
+   "points": 1040,
+   "comments": 237,
+   "created_at": "2022-04-18T19:37:55Z",
+   "updated_at": "2026-08-03T14:12:43Z"
+  }
+ ],
+ "_note": "Real run of 2026-10-23 (2,088 stories matched); two of the three stories are kept, as delivered. Authors are public Hacker News usernames, kept as shown."
+}

@@ -1,0 +1,52 @@
+{
+ "run_id": "cmvksnqmi0ugz41o5x3jgdrkx",
+ "slug": "pypi_packages",
+ "version": "1.2.0",
+ "status": "done",
+ "input": {
+  "packages": [
+   "requests",
+   "numpy",
+   "fastapi"
+  ],
+  "max_results": 3
+ },
+ "count": 3,
+ "partial": false,
+ "finished_at": "2026-10-23T09:55:23.072Z",
+ "results": [
+  {
+   "url": "https://pypi.org/project/numpy/",
+   "name": "numpy",
+   "rank": 2,
+   "author": "Travis E. Oliphant et al.",
+   "extras": [],
+   "yanked": false,
+   "license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+   "summary": "Fundamental package for array computing in Python",
+   "version": "2.5.4",
+   "homepage": "https://numpy.org",
+   "keywords": [],
+   "changelog": "https://numpy.org/doc/stable/release",
+   "maintainer": "NumPy Developers",
+   "repository": "https://github.com/numpy/numpy",
+   "released_at": "2026-10-10T20:02:40.843976Z",
+   "dependencies": [],
+   "documentation": "https://numpy.org/doc/",
+   "release_count": 152,
+   "python_versions": [
+    "3",
+    "3.12",
+    "3.13",
+    "3.14",
+    "3.15"
+   ],
+   "requires_python": ">=3.12",
+   "first_release_at": "2006-12-02T02:07:43Z",
+   "development_status": "5 - Production/Stable",
+   "known_vulnerabilities": 0,
+   "optional_dependencies_count": 0
+  }
+ ],
+ "_note": "Real run of 2026-10-23 on three packages; the numpy row (rank 2) is kept, as delivered."
+}

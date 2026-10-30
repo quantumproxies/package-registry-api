@@ -1,0 +1,67 @@
+{
+ "run_id": "cmvksnryd0uh341o5zszt0u20",
+ "slug": "docker_hub",
+ "version": "1.1.0",
+ "status": "done",
+ "input": {
+  "query": "postgres",
+  "max_results": 3
+ },
+ "count": 3,
+ "partial": false,
+ "finished_at": "2026-10-23T09:55:25.051Z",
+ "results": [
+  {
+   "url": "https://hub.docker.com/_/postgres",
+   "name": "postgres",
+   "rank": 1,
+   "pulls": 12002370895,
+   "stars": 15035,
+   "status": null,
+   "namespace": "library",
+   "categories": [],
+   "description": "The PostgreSQL object-relational database system provides reliability and data integrity.",
+   "is_official": true,
+   "is_automated": false,
+   "last_updated": null,
+   "pull_command": "docker pull postgres",
+   "storage_size": null,
+   "date_registered": null
+  },
+  {
+   "url": "https://hub.docker.com/r/cimg/postgres",
+   "name": "cimg/postgres",
+   "rank": 2,
+   "pulls": 839253754,
+   "stars": 9,
+   "status": null,
+   "namespace": "cimg",
+   "categories": [],
+   "description": null,
+   "is_official": false,
+   "is_automated": false,
+   "last_updated": null,
+   "pull_command": "docker pull cimg/postgres",
+   "storage_size": null,
+   "date_registered": null
+  },
+  {
+   "url": "https://hub.docker.com/r/circleci/postgres",
+   "name": "circleci/postgres",
+   "rank": 3,
+   "pulls": 510286181,
+   "stars": 35,
+   "status": null,
+   "namespace": "circleci",
+   "categories": [],
+   "description": "The PostgreSQL object-relational database system provides reliability and data integrity.",
+   "is_official": false,
+   "is_automated": false,
+   "last_updated": null,
+   "pull_command": "docker pull circleci/postgres",
+   "storage_size": null,
+   "date_registered": null
+  }
+ ],
+ "_note": "Real run of 2026-10-23 in search mode (the lookup fields such as last_updated and storage_size are filled when you pass images); all three rows kept as delivered."
+}

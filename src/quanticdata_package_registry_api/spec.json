@@ -1,0 +1,333 @@
+{
+ "cli": "package-registry",
+ "name": "Package Registry API",
+ "version": "0.1.0",
+ "description": "Package registry API for Python and the command line: npm, crates.io and Docker Hub search, PyPI package metadata, Hacker News stories and Stack Overflow questions in one client, with one sign-in and the same JSON or CSV rows for every source. Free and open source; runs on your QuanticData account.",
+ "links": {
+  "repo": "https://github.com/quantumproxies/package-registry-api",
+  "page": "https://quanticdata.io/collectors/npm-registry-api/?utm_source=github&utm_medium=cli&utm_campaign=package-registry-api",
+  "billing": "https://app.quanticdata.io/billing?utm_source=github&utm_medium=cli&utm_campaign=package-registry-api",
+  "pricing": "https://quanticdata.io/pricing/?utm_source=github&utm_medium=cli&utm_campaign=package-registry-api"
+ },
+ "commands": [
+  {
+   "name": "npm",
+   "collector": "npm_packages",
+   "method": "npm",
+   "help": "npm registry search",
+   "description": "Search the npm registry: name, latest version, description, license, weekly and monthly downloads, dependents, maintainers and links.",
+   "positional": "query",
+   "positional_is_list": false,
+   "positional_optional": false,
+   "columns": [
+    "name",
+    "version",
+    "downloads_weekly",
+    "dependents",
+    "license",
+    "published_at"
+   ],
+   "sample": "npm_packages",
+   "inputs": [
+    {
+     "name": "query",
+     "type": "string",
+     "required": true,
+     "description": "Search text: a package name, words, keywords:web-scraping, author:NAME or a scope, e.g. \"react state management\".",
+     "arg": "query"
+    },
+    {
+     "name": "max_results",
+     "type": "integer",
+     "required": false,
+     "description": "How many packages to deliver at most (1–100). You pay only for delivered packages.",
+     "min": 1,
+     "max": 100,
+     "default": 20,
+     "arg": "max_results"
+    }
+   ]
+  },
+  {
+   "name": "pypi",
+   "collector": "pypi_packages",
+   "method": "pypi",
+   "help": "PyPI package metadata by name",
+   "description": "Python package metadata from PyPI — version, summary, license, Python support, links.",
+   "positional": "packages",
+   "positional_is_list": true,
+   "positional_optional": false,
+   "columns": [
+    "name",
+    "version",
+    "requires_python",
+    "license",
+    "release_count",
+    "released_at"
+   ],
+   "sample": "pypi_packages",
+   "inputs": [
+    {
+     "name": "packages",
+     "type": "string[]",
+     "required": true,
+     "description": "PyPI package names, e.g. requests, numpy.",
+     "arg": "packages"
+    },
+    {
+     "name": "max_results",
+     "type": "integer",
+     "required": false,
+     "description": "How many packages to deliver at most (1–50). You pay only for delivered packages.",
+     "min": 1,
+     "max": 50,
+     "default": 10,
+     "arg": "max_results"
+    }
+   ]
+  },
+  {
+   "name": "crates",
+   "collector": "crates_io",
+   "method": "crates",
+   "help": "crates.io search for Rust crates",
+   "description": "Rust package search from the crates.io registry — downloads, versions, links.",
+   "positional": "query",
+   "positional_is_list": false,
+   "positional_optional": false,
+   "columns": [
+    "name",
+    "version",
+    "downloads",
+    "recent_downloads",
+    "updated_at"
+   ],
+   "sample": "crates_io",
+   "inputs": [
+    {
+     "name": "query",
+     "type": "string",
+     "required": true,
+     "description": "Crate name or keyword.",
+     "arg": "query"
+    },
+    {
+     "name": "sort",
+     "type": "string",
+     "required": false,
+     "description": "Result order.",
+     "enum": [
+      "relevance",
+      "downloads",
+      "recent_downloads",
+      "recent_updates",
+      "new"
+     ],
+     "default": "relevance",
+     "arg": "sort"
+    },
+    {
+     "name": "max_results",
+     "type": "integer",
+     "required": false,
+     "description": "How many crates to deliver at most (1–100). You pay only for delivered crates.",
+     "min": 1,
+     "max": 100,
+     "default": 25,
+     "arg": "max_results"
+    }
+   ]
+  },
+  {
+   "name": "docker",
+   "collector": "docker_hub",
+   "method": "docker",
+   "help": "Docker Hub image search and repository stats",
+   "description": "Docker image search and repository stats — stars, pulls, official flag.",
+   "positional": "query",
+   "positional_is_list": false,
+   "positional_optional": true,
+   "columns": [
+    "name",
+    "stars",
+    "pulls",
+    "is_official",
+    "description"
+   ],
+   "sample": "docker_hub",
+   "inputs": [
+    {
+     "name": "query",
+     "type": "string",
+     "required": false,
+     "description": "Image search text, e.g. postgres. Leave it out when you pass --images.",
+     "arg": "query"
+    },
+    {
+     "name": "images",
+     "type": "string[]",
+     "required": false,
+     "description": "Exact image references for detail lookups, e.g. redis or bitnami/postgresql.",
+     "arg": "images"
+    },
+    {
+     "name": "max_results",
+     "type": "integer",
+     "required": false,
+     "description": "How many images to deliver at most (1–100). You pay only for delivered images.",
+     "min": 1,
+     "max": 100,
+     "default": 25,
+     "arg": "max_results"
+    }
+   ]
+  },
+  {
+   "name": "hackernews",
+   "collector": "hacker_news",
+   "method": "hackernews",
+   "help": "Hacker News stories by search or the front page",
+   "description": "Hacker News stories for a search query, or the current front page: title, link, points, comment count, author and dates.",
+   "positional": "query",
+   "positional_is_list": false,
+   "positional_optional": true,
+   "columns": [
+    "rank",
+    "points",
+    "comments",
+    "created_at",
+    "domain",
+    "title"
+   ],
+   "sample": "hacker_news",
+   "inputs": [
+    {
+     "name": "query",
+     "type": "string",
+     "required": false,
+     "description": "What to search, e.g. \"web scraping\". Omit it for the current front page.",
+     "arg": "query"
+    },
+    {
+     "name": "type",
+     "type": "string",
+     "required": false,
+     "description": "Story type filter (default: story when searching, front_page otherwise).",
+     "enum": [
+      "story",
+      "ask_hn",
+      "show_hn",
+      "front_page"
+     ],
+     "arg": "type"
+    },
+    {
+     "name": "sort",
+     "type": "string",
+     "required": false,
+     "description": "relevance (default when searching) or date (newest first).",
+     "enum": [
+      "relevance",
+      "date"
+     ],
+     "arg": "sort"
+    },
+    {
+     "name": "max_results",
+     "type": "integer",
+     "required": false,
+     "description": "How many stories to deliver at most (1–200). You pay only for delivered stories.",
+     "min": 1,
+     "max": 200,
+     "default": 30,
+     "arg": "max_results"
+    }
+   ]
+  },
+  {
+   "name": "stackoverflow",
+   "collector": "stackoverflow",
+   "method": "stackoverflow",
+   "help": "Stack Overflow and Stack Exchange questions",
+   "description": "Questions from Stack Overflow and other Stack Exchange sites, by keyword or tag: score, answers, views, accepted answer, tags, license and, with --include-body, the question text.",
+   "positional": "query",
+   "positional_is_list": false,
+   "positional_optional": true,
+   "columns": [
+    "rank",
+    "score",
+    "answer_count",
+    "view_count",
+    "is_answered",
+    "title"
+   ],
+   "sample": "stackoverflow",
+   "inputs": [
+    {
+     "name": "query",
+     "type": "string",
+     "required": false,
+     "description": "Keyword to search in titles and bodies, e.g. \"web scraping\".",
+     "arg": "query"
+    },
+    {
+     "name": "tags",
+     "type": "string",
+     "required": false,
+     "description": "Semicolon-separated tags, e.g. python;asyncio.",
+     "arg": "tags"
+    },
+    {
+     "name": "site",
+     "type": "string",
+     "required": false,
+     "description": "Stack Exchange site (default stackoverflow).",
+     "enum": [
+      "stackoverflow",
+      "superuser",
+      "serverfault",
+      "askubuntu",
+      "mathoverflow",
+      "unix",
+      "dba",
+      "security",
+      "datascience"
+     ],
+     "default": "stackoverflow",
+     "arg": "site"
+    },
+    {
+     "name": "sort",
+     "type": "string",
+     "required": false,
+     "description": "Sort order. Default: relevance when a query is given, votes for a tag-only listing.",
+     "enum": [
+      "votes",
+      "activity",
+      "creation",
+      "relevance"
+     ],
+     "arg": "sort"
+    },
+    {
+     "name": "include_body",
+     "type": "boolean",
+     "required": false,
+     "description": "Also deliver the question body as plain text (same call, larger rows).",
+     "default": false,
+     "arg": "include_body"
+    },
+    {
+     "name": "max_results",
+     "type": "integer",
+     "required": false,
+     "description": "How many questions to deliver at most (1–100). You pay only for delivered questions.",
+     "min": 1,
+     "max": 100,
+     "default": 30,
+     "arg": "max_results"
+    }
+   ]
+  }
+ ]
+}

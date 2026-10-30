@@ -1,0 +1,68 @@
+{
+ "run_id": "cmvksnt0j0uh741o57klkidll",
+ "slug": "stackoverflow",
+ "version": "1.1.1",
+ "status": "done",
+ "input": {
+  "query": "web scraping",
+  "sort": "votes",
+  "max_results": 3
+ },
+ "count": 3,
+ "partial": false,
+ "finished_at": "2026-10-23T09:55:27.132Z",
+ "results": [
+  {
+   "body": null,
+   "link": "https://stackoverflow.com/questions/450835/stopping-scripters-from-slamming-your-website",
+   "rank": 1,
+   "tags": [
+    "scripting",
+    "e-commerce",
+    "bots",
+    "detection"
+   ],
+   "score": 506,
+   "title": "Stopping scripters from slamming your website",
+   "author": "Dave R.",
+   "license": "CC BY-SA 4.0",
+   "closed_at": null,
+   "last_edit": "2020-06-20T09:12:55.000Z",
+   "created_at": "2009-01-16T15:49:20.000Z",
+   "view_count": 93858,
+   "is_answered": true,
+   "question_id": 450835,
+   "answer_count": 129,
+   "closed_reason": null,
+   "last_activity": "2022-12-26T07:14:47.000Z",
+   "author_reputation": 5535,
+   "accepted_answer_id": 450899,
+   "has_accepted_answer": true
+  },
+  {
+   "body": null,
+   "link": "https://stackoverflow.com/questions/16995184/nodejs-what-does-socket-hang-up-actually-mean",
+   "rank": 2,
+   "tags": [
+    "node.js"
+   ],
+   "score": 482,
+   "title": "NodeJS - What does \"socket hang up\" actually mean?",
+   "author": "JVG",
+   "license": "CC BY-SA 3.0",
+   "closed_at": null,
+   "last_edit": "2013-06-08T07:53:35.000Z",
+   "created_at": "2013-06-08T01:45:25.000Z",
+   "view_count": 1129668,
+   "is_answered": true,
+   "question_id": 16995184,
+   "answer_count": 33,
+   "closed_reason": null,
+   "last_activity": "2022-09-30T10:45:06.000Z",
+   "author_reputation": 21300,
+   "accepted_answer_id": null,
+   "has_accepted_answer": false
+  }
+ ],
+ "_note": "Real run of 2026-10-23 sorted by votes; two of the three questions are kept. Author profile links and ids removed; a display name that reads as a full name is shortened to first name and last initial."
+}

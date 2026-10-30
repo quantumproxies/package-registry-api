@@ -1,0 +1,54 @@
+{
+ "run_id": "cmvksnra70uh141o5sfmfv6dp",
+ "slug": "crates_io",
+ "version": "1.1.0",
+ "status": "done",
+ "input": {
+  "query": "serde",
+  "max_results": 3
+ },
+ "count": 3,
+ "partial": false,
+ "finished_at": "2026-10-23T09:55:24.052Z",
+ "results": [
+  {
+   "url": "https://crates.io/crates/serde",
+   "name": "serde",
+   "rank": 1,
+   "yanked": false,
+   "version": "1.0.229",
+   "homepage": "https://serde.rs",
+   "downloads": 1575699114,
+   "created_at": "2014-12-05T20:20:39.487502Z",
+   "repository": "https://github.com/serde-rs/serde",
+   "updated_at": "2026-07-18T23:05:13.266456Z",
+   "description": "A generic serialization/deserialization framework",
+   "docs_rs_url": "https://docs.rs/serde",
+   "exact_match": true,
+   "documentation": "https://docs.rs/serde",
+   "newest_version": "1.0.229",
+   "versions_count": 316,
+   "recent_downloads": 378724032
+  },
+  {
+   "url": "https://crates.io/crates/serde-saphyr",
+   "name": "serde-saphyr",
+   "rank": 2,
+   "yanked": false,
+   "version": "2.0.0",
+   "homepage": null,
+   "downloads": 12639741,
+   "created_at": "2025-09-27T20:32:53.691021Z",
+   "repository": "https://github.com/bourumir-wyngs/serde-saphyr",
+   "updated_at": "2026-10-13T15:11:53.735115Z",
+   "description": "YAML (de)serializer for Serde, emphasizing panic-free parsing, fast builds and good error reporting.",
+   "docs_rs_url": "https://docs.rs/serde-saphyr",
+   "exact_match": false,
+   "documentation": "https://docs.rs/serde-saphyr/latest/serde-saphyr/",
+   "newest_version": "2.0.0",
+   "versions_count": 38,
+   "recent_downloads": 9422496
+  }
+ ],
+ "_note": "Real run of 2026-10-23 (24,094 crates matched); two of the three crates are kept, the second description cut after its first sentence."
+}

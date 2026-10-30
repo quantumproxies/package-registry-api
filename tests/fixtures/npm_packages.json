@@ -1,0 +1,71 @@
+{
+ "run_id": "cmvksnpz90ugx41o5tbgp8hkl",
+ "slug": "npm_packages",
+ "version": "1.1.0",
+ "status": "done",
+ "input": {
+  "query": "react state management",
+  "max_results": 3
+ },
+ "count": 3,
+ "partial": false,
+ "finished_at": "2026-10-23T09:55:22.365Z",
+ "results": [
+  {
+   "name": "unstated-next",
+   "rank": 1,
+   "license": "MIT",
+   "npm_url": "https://www.npmjs.com/package/unstated-next",
+   "version": "1.1.0",
+   "bugs_url": null,
+   "homepage": null,
+   "insecure": false,
+   "keywords": [],
+   "publisher": "thejameskyle",
+   "dependents": 257,
+   "repository": null,
+   "description": "200 bytes to never think about React state management libraries ever again",
+   "maintainers": [
+    "thejameskyle"
+   ],
+   "published_at": "2019-05-13T23:34:47.580Z",
+   "search_score": 382.99,
+   "quality_score": 1,
+   "downloads_weekly": 85141,
+   "popularity_score": 1,
+   "downloads_monthly": 500976,
+   "maintenance_score": 1
+  },
+  {
+   "name": "state-decorator",
+   "rank": 3,
+   "license": "MIT",
+   "npm_url": "https://www.npmjs.com/package/state-decorator",
+   "version": "8.0.0",
+   "bugs_url": "https://github.com/GlobalSport/state-decorator/issues",
+   "homepage": "https://github.com/GlobalSport/state-decorator#readme",
+   "insecure": false,
+   "keywords": [
+    "state",
+    "typescript",
+    "react",
+    "javascript"
+   ],
+   "publisher": "mycoach-deploy",
+   "dependents": 1,
+   "repository": "git+ssh://git@github.com/GlobalSport/state-decorator.git",
+   "description": "React state management library",
+   "maintainers": [
+    "mycoach-deploy"
+   ],
+   "published_at": "2026-09-09T12:00:40.661Z",
+   "search_score": 310.95,
+   "quality_score": 1,
+   "downloads_weekly": 218,
+   "popularity_score": 1,
+   "downloads_monthly": 2323,
+   "maintenance_score": 1
+  }
+ ],
+ "_note": "Real run of 2026-10-23; two of the three packages are kept (ranks 1 and 3), as delivered. Publishers and maintainers are public npm usernames."
+}
